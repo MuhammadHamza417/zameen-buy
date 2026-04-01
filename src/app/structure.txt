@@ -1,0 +1,11 @@
+Folder PATH listing for volume New Volume
+Volume serial number is AAFC-90C8
+E:.
+    favicon.ico
+    globals.css
+    layout.tsx
+    page.tsx
+    structure.txt
+    
+No subfolders exist 
+
