@@ -1,5 +1,4 @@
 import Link from 'next/link';
-import Image from 'next/image';
 
 const Navbar = () => {
   const navLinks = [
@@ -13,12 +12,9 @@ const Navbar = () => {
   return (
     <header className="sticky top-0 z-50 bg-[#1B263B] text-white shadow-md">
       <nav className="container mx-auto flex items-center justify-between px-6 py-4">
-        {/* Logo Section */}
         <div className="flex items-center gap-2">
-          {/* Aap apna logo image yahan add kar sakte hain */}
-          {/* <Image src="/logo.png" alt="ZameenDirect Logo" width={40} height={40} /> */}
           <Link href="/" className="text-2xl font-bold text-white">
-            Zameen<span className="text-[#E0C18E]">Direct</span>
+            Apna<span className="text-[#E0C18E]">GHAR</span>
           </Link>
         </div>
 

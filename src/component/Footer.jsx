@@ -40,7 +40,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-12">
           <div className="lg:col-span-2 space-y-5">
             <Link href="/" className="text-2xl font-bold text-white">
-              Zameen<span className="text-[#E0C18E]">Direct</span>
+              Apna<span className="text-[#E0C18E]">GHAR</span>
             </Link>
             <p className="text-gray-300 text-sm max-w-md">
               Premium real estate & property ecosystem connecting buyers, sellers, and agents.

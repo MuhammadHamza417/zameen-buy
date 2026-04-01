@@ -11,49 +11,49 @@ export default function HomePage() {
   ];
 
   const featuredProperties = [
-    {
-      id: 1,
-      title: 'Luxurious Villa in Defense',
-      location: 'Gulberg III, Lahore',
-      price: '750,000',
-      beds: 5,
-      baths: 4,
-      sqft: 4500,
-      image: 'https://images.unsplash.com/photo-1613490493576-7fde63acd811?q=80&w=2071&auto=format&fit=crop',
-      tag: 'Featured'
-    },
-    {
-      id: 2,
-      title: 'Modern Apartment Gulberg',
-      location: 'Gulberg III, Lahore',
-      price: '125,000',
-      beds: 3,
-      baths: 2,
-      sqft: 1800,
-      image: 'https://images.unsplash.com/photo-1522708323590-d24dbb6b0267?q=80&w=2070&auto=format&fit=crop',
-    },
-    {
-      id: 3,
-      title: 'Penthouse with City View',
-      location: 'Downton, Karachi',
-      price: '350,000',
-      beds: 4,
-      baths: 3,
-      sqft: 3200,
-      image: 'https://images.unsplash.com/photo-1512917774080-9991f1c4c750?q=80&w=2070&auto=format&fit=crop',
-      tag: 'Featured'
-    },
-    {
-      id: 4,
-      title: 'Cozy Family Home',
-      location: 'DHA Phase 6, Lahore',
-      price: '95,000',
-      beds: 3,
-      baths: 2,
-      sqft: 1600,
-      image: 'https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop',
-    }
-  ];
+  {
+    id: 1,
+    title: 'Luxurious Villa in Defense',
+    location: 'Gulberg III, Lahore',
+    price: '750,000',
+    beds: 5,
+    baths: 4,
+    sqft: 4500,
+    image: '/images/img1.webp',
+    tag: 'Featured'
+  },
+  {
+    id: 2,
+    title: 'Modern Apartment Gulberg',
+    location: 'Gulberg III, Lahore',
+    price: '125,000',
+    beds: 3,
+    baths: 2,
+    sqft: 1800,
+    image: '/images/img2.webp',
+  },
+  {
+    id: 3,
+    title: 'Penthouse with City View',
+    location: 'Downton, Karachi',
+    price: '350,000',
+    beds: 4,
+    baths: 3,
+    sqft: 3200,
+    image: '/images/img3.webp',
+    tag: 'Featured'
+  },
+  {
+    id: 4,
+    title: 'Cozy Family Home',
+    location: 'DHA Phase 6, Lahore',
+    price: '95,000',
+    beds: 3,
+    baths: 2,
+    sqft: 1600,
+    image: '/images/img4.webp',
+  }
+];
 
   return (
     <div className="flex flex-col w-full">
@@ -126,31 +126,37 @@ export default function HomePage() {
             <Link href="/search" className="text-[#E0C18E] font-semibold hover:underline">View All &rarr;</Link>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {featuredProperties.map((prop) => (
-              <div key={prop.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
-                <div className="relative h-56 w-full">
-                  <Image src={prop.image} alt={prop.title} fill className="object-cover" />
-                  {prop.tag && (
-                    <span className="absolute top-4 left-4 bg-[#E0C18E] text-[#1B263B] text-[10px] font-bold px-3 py-1 rounded-full uppercase">
-                      {prop.tag}
-                    </span>
-                  )}
-                </div>
-                <div className="p-5">
-                  <h3 className="font-bold text-lg text-[#1B263B] mb-1">{prop.title}</h3>
-                  <p className="text-gray-400 text-xs mb-3 flex items-center gap-1">
-                    <Map size={12} /> {prop.location}
-                  </p>
-                  <p className="text-[#1B263B] text-xl font-bold mb-4">{prop.price}</p>
-                  <div className="flex items-center justify-between border-t border-gray-50 pt-4 text-gray-500 text-xs">
-                    <span>{prop.beds} Beds</span>
-                    <span>{prop.baths} Baths</span>
-                    <span>{prop.sqft} sqft</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
+  {featuredProperties.map((prop) => (
+    <div key={prop.id} className="bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-md transition-all">
+      <div className="relative h-56 w-full">
+        <Image 
+          src={prop.image} 
+          alt={prop.title} 
+          fill 
+          className="object-cover" 
+        />
+        {prop.tag && (
+          <span className="absolute top-4 left-4 bg-[#E0C18E] text-[#1B263B] text-[10px] font-bold px-3 py-1 rounded-full uppercase">
+            {prop.tag}
+          </span>
+        )}
+      </div>
+
+      <div className="p-5">
+        <h3 className="font-bold text-lg text-[#1B263B] mb-1">{prop.title}</h3>
+        <p className="text-gray-400 text-xs mb-3 flex items-center gap-1">
+          <Map size={12} /> {prop.location}
+        </p>
+        <p className="text-[#1B263B] text-xl font-bold mb-4">{prop.price}</p>
+        <div className="flex items-center justify-between border-t border-gray-50 pt-4 text-gray-500 text-xs">
+          <span>{prop.beds} Beds</span>
+          <span>{prop.baths} Baths</span>
+          <span>{prop.sqft} sqft</span>
+        </div>
+      </div>
+    </div>
+  ))}
+</div>
         </div>
       </section>
 
