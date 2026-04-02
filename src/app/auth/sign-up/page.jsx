@@ -68,7 +68,7 @@ export default function SignUpPage() {
           whileTap={{ scale: 0.98 }}
           className="w-full bg-[#1B263B] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-xl shadow-gray-200 transition-all text-sm mt-2"
         >
-          Create Account <ArrowRight size={18} />
+          Create Account
         </motion.button>
       </form>
 
