@@ -5,6 +5,7 @@ import { useState } from 'react';
 import { motion, useScroll, useMotionValueEvent } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 
+
 const Navbar = () => {
   const [isHidden, setIsHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
@@ -66,7 +67,7 @@ const Navbar = () => {
               Post Property
             </Link>
             <Link
-              href="/sign-in"
+              href="/auth/login"
               className="text-base font-bold text-gray-200 hover:text-[#E0C18E] transition-colors"
             >
               Sign In
@@ -99,7 +100,7 @@ const Navbar = () => {
             </Link>
           ))}
           <div className="flex flex-col gap-4 mt-4">
-            <Link href="/sign-in" className="text-xl font-bold text-gray-300">Sign In</Link>
+            <Link href="/auth/login" className="text-xl font-bold text-gray-300">Sign In</Link>
             <Link href="/post-property" className="bg-[#E0C18E] text-[#1B263B] py-5 rounded-2xl text-center font-black text-xl">Post Property</Link>
           </div>
         </motion.div>
