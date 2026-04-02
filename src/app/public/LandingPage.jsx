@@ -147,7 +147,6 @@ export default function HomePage() {
 
   return (
     <div className="flex flex-col w-full overflow-x-hidden">
-      {/* Hero Section */}
       <section className="relative bg-[#1B263B] py-16 md:py-24 px-4 md:px-6 text-center text-white">
         <motion.div
           variants={fadeUp}
@@ -227,7 +226,6 @@ export default function HomePage() {
         </motion.div>
       </section>
 
-      {/* Categories Section */}
       <section className="py-16 md:py-20 px-4 md:px-6 bg-[#f4f4f5] text-center">
         <div className="container mx-auto">
           <motion.h2
@@ -272,7 +270,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Featured Properties */}
       <section className="py-16 md:py-20 px-4 md:px-6 bg-[#F8F9FA]">
         <div className="container mx-auto">
           <motion.div
@@ -346,7 +343,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Why Choose Section */}
       <section className="py-16 md:py-20 px-4 md:px-6 bg-[#f4f4f5] text-center">
         <div className="container mx-auto">
           <motion.div variants={fadeUp} initial="hidden" animate="show">

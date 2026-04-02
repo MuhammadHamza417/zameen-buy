@@ -22,10 +22,10 @@ const Navbar = () => {
 
   const navLinks = [
     { name: 'Home', href: '/' },
-    { name: 'Search', href: '/search' },
-    { name: 'Agents', href: '/agents' },
-    { name: 'Blog', href: '/blog' },
-    { name: 'Tools', href: '/tools' },
+    { name: 'Search', href: '/' },
+    { name: 'Agents', href: '/' },
+    { name: 'Blog', href: '/' },
+    { name: 'Tools', href: '/' },
   ];
 
   return (
