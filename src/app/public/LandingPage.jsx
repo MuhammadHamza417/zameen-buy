@@ -288,10 +288,10 @@ export default function HomePage() {
             </div>
 
             <Link
-              href="/search"
+              href="/public/search"
               className="text-[#E0C18E] font-semibold hover:underline flex items-center gap-1"
             >
-              View All <ArrowRight size={16} />
+              View All
             </Link>
           </motion.div>
 
