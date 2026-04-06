@@ -1,7 +1,7 @@
 "use client";
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { Star, MapPin, Award } from 'lucide-react';
+import { Star, MapPin, Award, MessageCircle } from 'lucide-react';
 
 export default function AgentCard({ agent, index }) {
   return (
@@ -66,8 +66,12 @@ export default function AgentCard({ agent, index }) {
           </div>
         </div>
 
-        <button className="w-full py-2 bg-[#1B263B] text-white rounded-lg font-bold text-[12px] hover:bg-[#25334d] transition-colors active:scale-95">
-          View Profile
+        <button 
+          onClick={() => window.open(`https://wa.me/${agent.phone}`, '_blank')}
+          className="w-full py-2 bg-[#25D366] text-white rounded-lg font-bold text-[12px] hover:bg-[#21ba5a] transition-colors active:scale-95 flex items-center justify-center gap-2"
+        >
+          Contact on WhatsApp
+          <MessageCircle size={16} fill="white" />
         </button>
       </div>
     </motion.div>
