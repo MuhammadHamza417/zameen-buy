@@ -468,7 +468,6 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* CTA Section */}
       <section className="py-16 md:py-20 px-4 md:px-6 bg-[#1B263B] text-center text-white relative overflow-hidden">
         <motion.div
           variants={scaleIn}
@@ -484,9 +483,12 @@ export default function HomePage() {
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
-            <button className="bg-[#E0C18E] text-[#1B263B] px-8 py-3 rounded-lg font-bold hover:scale-105 transition-all shadow-lg">
-              Explore Properties
-            </button>
+            <Link 
+  href="/public/search" 
+  className="inline-block bg-[#E0C18E] text-[#1B263B] px-8 py-3 rounded-lg font-bold hover:scale-105 transition-all shadow-lg text-center"
+>
+  Explore Properties
+</Link>
             <button className="bg-transparent border-2 border-white px-8 py-3 rounded-lg font-bold hover:bg-white hover:text-[#1B263B] transition-all">
               Post Your Property
             </button>

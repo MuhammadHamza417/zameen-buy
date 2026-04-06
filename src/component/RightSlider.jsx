@@ -90,15 +90,6 @@ const RightSidebar = ({ isOpen, onClose, type }) => {
                 ))
               )}
             </div>
-
-            {items.length > 0 && (
-              <div className="p-6 bg-white border-t border-gray-100 shadow-[0_-4px_20px_rgba(0,0,0,0.05)]">
-                <button className="w-full bg-[#1B263B] text-white py-4 rounded-xl font-bold flex items-center justify-center gap-2 hover:bg-[#25324d] transition-colors active:scale-[0.98]">
-                  {type === "wishlist" ? "View All Favorites" : "Proceed to Inquiry"}
-                  <ArrowRight size={18} />
-                </button>
-              </div>
-            )}
           </motion.div>
         </>
       )}
