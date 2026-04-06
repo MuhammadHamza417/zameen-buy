@@ -49,7 +49,7 @@ const Footer = () => {
             className="sm:col-span-2 lg:col-span-2 space-y-6"
           >
             <Link href="/" className="text-3xl font-bold text-white tracking-tight">
-              Apna<span className="text-[#E0C18E]">GHAR</span>
+              Zameen<span className="text-[#E0C18E]">BUY</span>
             </Link>
             <p className="text-gray-300 text-sm leading-relaxed max-w-sm">
               Premium real estate & property ecosystem connecting buyers, sellers, and agents across Pakistan.

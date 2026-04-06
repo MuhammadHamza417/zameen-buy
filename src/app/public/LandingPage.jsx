@@ -347,7 +347,7 @@ export default function HomePage() {
         <div className="container mx-auto">
           <motion.div variants={fadeUp} initial="hidden" animate="show">
             <h2 className="text-2xl md:text-3xl font-bold text-[#1B263B] mb-2">
-              Why Choose ApnaGHAR?
+              Why Choose ZameenBUY?
             </h2>
             <p className="text-gray-500 mb-16 text-sm md:text-base">
               Industry-leading platform with proven results
@@ -479,7 +479,7 @@ export default function HomePage() {
             Ready to Get Started?
           </h2>
           <p className="text-gray-300 mb-10 text-sm md:text-base">
-            Start your real estate journey with ApnaGHAR today
+            Start your real estate journey with ZameenBUY today
           </p>
 
           <div className="flex flex-col sm:flex-row justify-center gap-4">
