@@ -291,7 +291,7 @@ export default function HomePage() {
               href="/public/search"
               className="text-[#E0C18E] font-semibold hover:underline flex items-center gap-1"
             >
-              View All
+              View All 
             </Link>
           </motion.div>
 

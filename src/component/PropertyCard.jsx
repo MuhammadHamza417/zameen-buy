@@ -3,8 +3,38 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Bed, Bath, Move, Heart, MapPin, Bookmark } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useDispatch, useSelector } from 'react-redux';
+import { addToWishlist, removeFromWishlist, addToCart, removeFromCart } from '../app/store/slice/wishlistSlice';
 
 export default function PropertyCard({ property, horizontal = false }) {
+  const dispatch = useDispatch();
+  
+  const wishlist = useSelector((state) => state.appData.wishlist);
+  const isWishlisted = wishlist.some((item) => item.id === property.id);
+
+  const cart = useSelector((state) => state.appData.cart);
+  const isSaved = cart.some((item) => item.id === property.id);
+
+  const handleWishlist = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (isWishlisted) {
+      dispatch(removeFromWishlist(property.id));
+    } else {
+      dispatch(addToWishlist(property));
+    }
+  };
+
+  const handleAddToCart = (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+    if (isSaved) {
+      dispatch(removeFromCart(property.id));
+    } else {
+      dispatch(addToCart(property));
+    }
+  };
+
   return (
     <Link href={`/public/search/propertydetail/${property.id}`}>
       <motion.div 
@@ -25,17 +55,27 @@ export default function PropertyCard({ property, horizontal = false }) {
           />
           
           <div className="absolute top-3 right-3 flex flex-col gap-2">
-            <Link href="#" onClick={(e) => e.stopPropagation()}>
-              <button className="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-600 hover:text-red-600 shadow-md transition-all active:scale-90">
-                <Heart size={18} />
-              </button>
-            </Link>
+            <button 
+              onClick={handleWishlist}
+              className={`p-2 backdrop-blur-sm rounded-full shadow-md transition-all active:scale-90 ${
+                isWishlisted 
+                ? 'bg-red-600 text-white' 
+                : 'bg-white/90 text-gray-600 hover:text-red-600'
+              }`}
+            >
+              <Heart size={18} fill={isWishlisted ? "currentColor" : "none"} />
+            </button>
 
-            <Link href="#" onClick={(e) => e.stopPropagation()}>
-              <button className="p-2 bg-white/90 backdrop-blur-sm rounded-full text-gray-600 hover:text-[#1B263B] shadow-md transition-all active:scale-90">
-                <Bookmark size={18} />
-              </button>
-            </Link>
+            <button 
+              onClick={handleAddToCart}
+              className={`p-2 backdrop-blur-sm rounded-full shadow-md transition-all active:scale-90 ${
+                isSaved 
+                ? 'bg-[#1B263B] text-white/90' 
+                : 'bg-white/90 text-gray-600 hover:text-[#1B263B]'
+              }`}
+            >
+              <Bookmark size={18} fill={isSaved ? "currentColor" : "none"} />
+            </button>
           </div>
         </div>
         
