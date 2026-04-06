@@ -1,11 +1,41 @@
 Folder PATH listing for volume New Volume
 Volume serial number is AAFC-90C8
 E:.
-    favicon.ico
-    globals.css
-    layout.tsx
-    page.tsx
-    structure.txt
-    
-No subfolders exist 
-
+|   favicon.ico
+|   globals.css
+|   layout.js
+|   page.js
+|   structure.txt
+|   
++---auth
+|   |   layout.jsx
+|   |   
+|   +---change-password
+|   |       page.jsx
+|   |       
+|   +---forget-password
+|   |       page.jsx
+|   |       
+|   +---login
+|   |       page.jsx
+|   |       
+|   +---resend-verification
+|   |       page.jsx
+|   |       
+|   \---sign-up
+|           page.jsx
+|           
++---data
+|       ajents.json
+|       properties.json
+|       
++---public
+|   |   LandingPage.jsx
+|   |   
+|   +---agents
+|   |       page.jsx
+|   |       
+|   \---search
+|           page.jsx
+|           
+\---style
