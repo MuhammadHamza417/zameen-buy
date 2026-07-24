@@ -52,10 +52,7 @@ export default function LoginPage() {
       </form>
 
       <div className="mt-8">
-        <div className="relative flex items-center justify-center mb-6">
-          <div className="border-t border-gray-100 w-full"></div>
-          <span className="bg-white px-4 text-[10px] font-black text-gray-400 uppercase tracking-widest absolute italic">Social Auth</span>
-        </div>
+        
         
         <div className="grid grid-cols-2 gap-3">
           <button className="flex items-center justify-center gap-2 py-3 border border-gray-100 rounded-2xl hover:bg-gray-50 transition-all font-bold text-[11px] text-[#1B263B]">
