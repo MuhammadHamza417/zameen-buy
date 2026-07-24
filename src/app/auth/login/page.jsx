@@ -49,10 +49,22 @@ export default function LoginPage() {
           </div>
         </div>
 
+        <Link href="/" className="w-full">
+        <motion.button 
+          whileHover={{ scale: 1.01 }}
+          whileTap={{ scale: 0.98 }}
+          className="w-full bg-[#1B263B] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-xl shadow-gray-200 transition-all text-sm mt-2"
+        >
+          Sign In
+        </motion.button>
+        </Link>
       </form>
 
       <div className="mt-8">
-        
+        <div className="relative flex items-center justify-center mb-6">
+          <div className="border-t border-gray-100 w-full"></div>
+          <span className="bg-white px-4 text-[10px] font-black text-gray-400 uppercase tracking-widest absolute italic">Social Auth</span>
+        </div>
         
         <div className="grid grid-cols-2 gap-3">
           <button className="flex items-center justify-center gap-2 py-3 border border-gray-100 rounded-2xl hover:bg-gray-50 transition-all font-bold text-[11px] text-[#1B263B]">
