@@ -49,15 +49,6 @@ export default function LoginPage() {
           </div>
         </div>
 
-        <Link href="/" className="w-full">
-        <motion.button 
-          whileHover={{ scale: 1.01 }}
-          whileTap={{ scale: 0.98 }}
-          className="w-full bg-[#1B263B] text-white py-4 rounded-2xl font-bold flex items-center justify-center gap-3 shadow-xl shadow-gray-200 transition-all text-sm mt-2"
-        >
-          Sign
-        </motion.button>
-        </Link>
       </form>
 
       <div className="mt-8">
